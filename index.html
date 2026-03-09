@@ -5,39 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PolePos - Formula 1 Tahmin Uygulaması</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background-color: #e10600; color: white; padding: 3rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
-        .tech-stack { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
-        .tech-badge { background: #fff; color: #e10600; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .screenshots { display: flex; gap: 20px; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
-        .screenshots img { max-width: 250px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
-        .screenshots img:hover { transform: translateY(-5px); }
-        .description { text-align: center; margin-top: 2rem; font-size: 1.2rem; line-height: 1.6; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+       
+        header { 
+            background-color: #050505; 
+            border-bottom: 3px solid #e10600;
+            padding: 2.5rem 0; 
+            text-align: center; 
+        }
+        
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0px 4px 6px rgba(225, 6, 0, 0.2));
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            color: #e10600;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            color: #aaaaaa;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 2rem auto; 
+            padding: 0 20px; 
+        }
+
+        .tech-stack { 
+            display: flex; 
+            gap: 12px; 
+            justify-content: center; 
+            margin-top: 20px; 
+        }
+        .tech-badge { 
+            background: #e10600; 
+            color: #fff; 
+            padding: 6px 16px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            font-size: 0.9rem; 
+            box-shadow: 0 2px 8px rgba(225, 6, 0, 0.4); 
+        }
+
+        .description { 
+            text-align: center; 
+            margin-top: 2rem; 
+            font-size: 1.2rem; 
+            line-height: 1.6; 
+            color: #dddddd;
+        }
+
+        h2.gallery-title {
+            text-align: center; 
+            margin-top: 3.5rem; 
+            margin-bottom: 1.5rem;
+            color: #e10600;
+        }
+
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 1rem 0 2rem 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .gallery-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .gallery-container::-webkit-scrollbar-track {
+            background: #222; 
+            border-radius: 10px;
+        }
+        .gallery-container::-webkit-scrollbar-thumb {
+            background: #e10600; 
+            border-radius: 10px;
+        }
+        .gallery-container::-webkit-scrollbar-thumb:hover {
+            background: #ff1a1a; 
+        }
+
+        .screenshot-card {
+            flex: 0 0 auto;
+            width: 250px; 
+            scroll-snap-align: center;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            border-color: #e10600;
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .screenshot-card p {
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #cccccc;
+        }
     </style>
 </head>
 <body>
 
 <header>
+    <div class="logo-container">
+        <img src="PolePosLogo.png" alt="PolePos Logo">
+    </div>
     <h1>PolePos</h1>
-    <p>Formula 1 heyecanını tahminlerinle katla!</p>
+    <p></p>
     <div class="tech-stack">
         <span class="tech-badge">React Native</span>
-        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Expo</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">NativeWind</span>
+        <span class="tech-badge">RESTful API</span>
+        <span class="tech-badge">Clerk (Auth)</span>
+        <span class="tech-badge">Supabase</span>
     </div>
 </header>
 
 <div class="container">
     <div class="description">
-        <p>PolePos, yarış hafta sonlarında stratejilerini ve tahminlerini konuşturabileceğin, motor sporları tutkunları için özel olarak geliştirilmiş bir mobil uygulamadır.</p>
+        <p>This is my first React Native project that I developed myself. Unfortunately, it's not currently available on mobile app stores.</p>
+        <p>Please contact me for the APK or TestFlight.</p>
     </div>
 
-    <h2 style="text-align: center; margin-top: 3rem;">Uygulama İçi Görüntüler</h2>
-    <div class="screenshots">
-        <img src="images/screenshot1.png" alt="PolePos Ana Ekran">
-        <img src="images/screenshot2.png" alt="Tahmin Ekranı">
-        <img src="images/screenshot3.png" alt="Sıralamalar ve Puan Tablosu">
+    <h2 class="gallery-title">App Screenshots</h2>
+    
+    <div class="gallery-container">
+        <div class="screenshot-card">
+            <img src="screenshot1.jpg" alt="Ekran 1">
+            <p>Login Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="screenshot2.jpg" alt="Ekran 2">
+            <p>Race Prediction Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="screenshot3.jpg" alt="Ekran 3">
+            <p>Driver Selection Modal</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="screenshot4.jpg" alt="Ekran 4">
+            <p>Profile Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="screenshot5.jpg" alt="Ekran 5">
+            <p>F1 Calendar Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="screenshot6.jpg" alt="Ekran 6">
+            <p>Driver & Team Standings</p>
+        </div>
     </div>
 </div>
 
