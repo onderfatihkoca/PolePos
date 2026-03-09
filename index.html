@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PolePos - Formula 1 Tahmin Uygulaması</title>
     <style>
-        
+        html {
+            scroll-behavior: smooth;
+        }
+
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
@@ -14,7 +17,6 @@
             color: #ffffff;
         }
 
-       
         header { 
             background-color: #050505; 
             border-bottom: 3px solid #e10600;
@@ -52,8 +54,10 @@
             display: flex; 
             gap: 12px; 
             justify-content: center; 
-            margin-top: 20px; 
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
+        
         .tech-badge { 
             background: #e10600; 
             color: #fff; 
@@ -70,6 +74,18 @@
             font-size: 1.2rem; 
             line-height: 1.6; 
             color: #dddddd;
+        }
+
+        .description a {
+            color: #e10600;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .description a:hover {
+            color: #ff1a1a;
+            text-decoration: underline;
         }
 
         h2.gallery-title {
@@ -133,6 +149,35 @@
             font-size: 0.95rem;
             color: #cccccc;
         }
+
+        footer {
+            background-color: #050505;
+            border-top: 3px solid #e10600;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #aaaaaa;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: #e10600;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff1a1a;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +186,7 @@
     <div class="logo-container">
         <img src="PolePosLogo.png" alt="PolePos Logo">
     </div>
-    <h1>PolePos</h1>
+    
     <p></p>
     <div class="tech-stack">
         <span class="tech-badge">React Native</span>
@@ -157,7 +202,7 @@
 <div class="container">
     <div class="description">
         <p>This is my first React Native project that I developed myself. Unfortunately, it's not currently available on mobile app stores.</p>
-        <p>Please contact me for the APK or TestFlight.</p>
+        <p>Please <a href="#contact-footer">contact me</a> for the APK or TestFlight.</p>
     </div>
 
     <h2 class="gallery-title">App Screenshots</h2>
@@ -189,6 +234,11 @@
         </div>
     </div>
 </div>
+
+<footer id="contact-footer">
+    <p>Contact for APK / TestFlight:</p>
+    <a href="mailto:onderfatihkoca@gmail.com">onderfatihkoca@gmail.com</a>
+</footer>
 
 </body>
 </html>
